@@ -23,6 +23,7 @@
         </header>
 
         <section class="score-panel">
+
             <ul class="stars">
                 <li><i id="starOne" class="fa fa-star star"></i></li>
                 <li><i id="starTwo" class="fa fa-star star"></i></li>
@@ -30,69 +31,78 @@
             </ul>
 
             <span class="moves left">3</span> Moves
+
             <span id="minutes"></span>:<span id="seconds"></span>
+
             <div class="restart right">
                 <i class="fa fa-repeat"></i> Restart
             </div>
+
         </section>
 
-        <ul class="deck ">
+        <ul class="deck">
 
         </ul>
     </div>
 
     <!-- Modal You won-->
-    <div class="modal fade text-center" id="popUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal fade text-center" id="popUp" tabindex="-1" role="dialog"  aria-hidden="true">
+
         <div class="modal-dialog modal-dialog-centered" role="document">
+
             <div class="modal-content">
+
                 <div class="modal-body">
 
-                    <h5 class="modal-title font-big" id="exampleModalLongTitle">You Won!</h5>
-                    <p id="popStar">
+                    <h5 class="modal-title font-big" id="exampleModal">You Won!</h5>
 
+                    <p id="popStar">
                         <i id="star" class="fa fa-star star big "></i>
                         <i id="starr" class="fa fa-star star big"></i>
                         <i id="starrr" class="fa fa-star star big "></i>
-
                     </p>
+
                     <p class="font-small">Ends In: <br>
+
                         <span id="minute"></span>:<span id="second"></span></p>
-                    <button id="again" type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">
+
+                    <button  type="button" class="btn btn-primary again" data-dismiss="modal" aria-label="Close">
                       Play Again
                     </button>
+
                     <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">
                       Close
                     </button>
-                </div>
 
+                </div>
             </div>
         </div>
     </div>
 
 
     <!-- Modal You lost-->
-    <div class="modal fade text-center" id="popUpLose" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal fade text-center" id="popUpLose" tabindex="-1" role="dialog"  aria-hidden="true">
+
         <div class="modal-dialog modal-dialog-centered" role="document">
+
             <div class="modal-content">
+
                 <div class="modal-body">
 
                     <h5 class="modal-title font-big" id="exampleModalLongTitle">You Lost!</h5>
 
-
                     <div class="restart ">
-                        <i class="fa fa-repeat bigger" id="again" data-dismiss="modal" aria-label="Close"></i>
+                        <i class="fa fa-repeat bigger again"  data-dismiss="modal" aria-label="Close"></i>
                     </div>
-
 
                     <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">
                        Close
                     </button>
-                </div>
 
+                </div>
             </div>
         </div>
     </div>
-
 
     <!--JavaScript-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
