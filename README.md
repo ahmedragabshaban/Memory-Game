@@ -14,10 +14,12 @@ and if you finish with 15 moves you get 2 stars and 1 star for 18 moves.
 
 ## Win
 you win when you match all cards.
+
 <img src="https://github.com/ahmedragabshaban/Memory-Game/blob/master/win.JPG">
 
 ## LOSE
 you lose when you finish the game with total number 20 moves.
+
 <img src="https://github.com/ahmedragabshaban/Memory-Game/blob/master/lose.JPG">
 
 ## Restart
