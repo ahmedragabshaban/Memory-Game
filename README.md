@@ -3,6 +3,9 @@
  
 <img src="https://github.com/ahmedragabshaban/Memory-Game/blob/master/game.JPG">
 
+## HOW TO Run
+open with your browser index.html file.
+
 ## HOW TO PLAY
 The playing is very simple - you have 10 seconds to memorize all cards after that all cards will be hidden, you need to match pairs of tiles by turning over one tile and then try to find a matching tile.
 
