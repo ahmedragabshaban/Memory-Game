@@ -1,6 +1,6 @@
 # Memory Game Project
  is a memory game where you need to match pairs of tiles.
-
+<img src="https://github.com/ahmedragabshaban/Memory-Game/blob/master/game.JPG">
 
 ## HOW TO PLAY
 
