@@ -3,6 +3,7 @@
  
 <img src="https://github.com/ahmedragabshaban/Memory-Game/blob/master/game.JPG">
 
+
 ## HOW TO Run
 open with your browser index.html file.
 
@@ -28,4 +29,16 @@ you lose when you finish the game with total number 20 moves.
 ## Restart
 you can restart the game when you want.
 
+## Resources used to create the game:
 
+Array shuffle:
+http://stackoverflow.com/a/2450976
+
+Timer:
+https://stackoverflow.com/questions/5517597/plain-count-up-timer-in-javascript
+
+animate.css:
+https://daneden.github.io/animate.css/
+
+## License
+This project is licensed under the terms of the MIT license.
