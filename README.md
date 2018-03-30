@@ -1,8 +1,24 @@
 # Memory Game Project
- is a memory game where you need to match pairs of tiles.
- 
-<img src="https://github.com/ahmedragabshaban/Memory-Game/blob/master/game.JPG">
 
+
+## Table of Contents
+
+* [Description](#discription)
+* [HOW TO Run](#HOW TO Run)
+* [HOW TO PLAY](#HOW TO PLAY)
+* [Score](#SCORE)
+* [Win](#Win)
+* [Lose](#LOSE)
+* [Restart](#Restart)
+* [Resources](#Resources)
+* [License](#license)
+
+
+
+## Description
+ is a memory game where you need to match pairs of tiles.
+
+<img src="https://github.com/ahmedragabshaban/Memory-Game/blob/master/game.JPG">
 
 ## HOW TO Run
 open with your browser index.html file.
@@ -29,7 +45,7 @@ you lose when you finish the game with total number 20 moves.
 ## Restart
 you can restart the game when you want.
 
-## Resources used to create the game:
+## Resources
 
 Array shuffle:
 http://stackoverflow.com/a/2450976
