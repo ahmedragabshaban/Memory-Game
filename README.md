@@ -3,12 +3,12 @@
 
 ## Table of Contents
 
-* [Description](#discription)
-* [HOW TO Run](#HOW TO Run)
-* [HOW TO PLAY](#HOW-TO-PLAY)
-* [Score](#sCORE)
+* [Description](#description)
+* [HOW TO Run](#how-to-run)
+* [HOW TO PLAY](#how-to-play)
+* [Score](#score)
 * [Win](#win)
-* [Lose](#lOSE)
+* [Lose](#lose)
 * [Restart](#restart)
 * [Resources](#resources)
 * [License](#license)
