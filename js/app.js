@@ -6,7 +6,7 @@ $(function() {
         const popUp = $("#popUp");
         const popUpLose = $("#popUpLose");
         const moves = $(".moves");
-        const again = $("#again");
+        const again = $(".again");
         const deck = $(".deck");
         const restart = $(".restart");
         const starOne = $("#starOne");
@@ -16,6 +16,10 @@ $(function() {
         const starThreePop = $("#starrr");
         const starTwoPop = $("#starr");
         const starOnePop = $("#star");
+        const seconds = $("#seconds");
+        const second = $("#second");
+        const minutes = $("#minutes");
+        const minute = $("#minute");
         const diamond = '<i class="fa fa-diamond"></i>';
         const plane = '<i class="fa fa-paper-plane-o"></i>';
         const anchor = '<i class="fa fa-anchor"></i>';
@@ -36,7 +40,7 @@ $(function() {
 
         // Shuffle function from http://stackoverflow.com/a/2450976
         function shuffle(array) {
-            var currentIndex = array.length,
+            let currentIndex = array.length,
                 temporaryValue, randomIndex;
             while (currentIndex !== 0) {
                 randomIndex = Math.floor(Math.random() * currentIndex);
@@ -66,25 +70,31 @@ $(function() {
              setTimeout(function() {
              card.toggleClass("noClick");
               }, 500);
-        }
+        }  
+    
 
-        //hide cards after 10 seconds
-        setTimeout(function() {
-            display(card);
-        }, 10000);
-
-        //start the timer
+         //start the timer
         //countup function from https://stackoverflow.com/questions/5517597/plain-count-up-timer-in-javascript (modified version)
-        var sec = 0;
+       
+        let sec = -9;
         function pad(val) {
             return val > 9 ? val : "0" + val;
         }
-        var timer = setInterval(function() {
-            document.getElementById("seconds").innerHTML = pad(++sec % 60);
-             document.getElementById("second").innerHTML = pad(++sec % 60);
-                document.getElementById("minutes").innerHTML = pad(parseInt(sec / 60, 10));
-            document.getElementById("minute").innerHTML = pad(parseInt(sec / 60, 10));
-        }, 2000); //End of function
+         let timer = setInterval(function() {
+            seconds.html(pad(++sec % 60));
+            second.html(pad(++sec % 60));
+            minutes.html(pad(parseInt(sec / 60, 10)));
+            minute.html(pad(parseInt(sec / 60, 10)));
+         
+         }, 2000);
+              //hide cards after 10 seconds
+        setTimeout(function() {
+        display(card);
+        minutes.toggleClass("hide");
+        seconds.toggleClass("hide");
+ //End of function
+
+        }, 10000);
 
         //Switch the cards functions
         function display(a) {
@@ -146,8 +156,7 @@ $(function() {
             if (finish === 8) {
                 setTimeout(function() {
             //stop the timer
-                clearInterval(timer);
-
+             clearInterval(timer);
             //show popUp
             popUp.modal('show');
 
@@ -178,8 +187,7 @@ $(function() {
 
            // 20 moves you lose
             else if (count === 20) {
-                clearInterval(timer);
-
+            clearInterval(timer);
             //show popUp
             popUpLose.modal('show'); 
             }
@@ -203,8 +211,11 @@ $(function() {
         //set up restart button
         function reset() {
             //remove cards from game
+        minutes.toggleClass("hide");
+        seconds.toggleClass("hide");
             $(".deck").empty();
-            //reset num of moves
+              clearInterval(timer);        
+             //reset num of moves
             count = 0;
             moves.html(count);
             //reset stars
@@ -218,6 +229,7 @@ $(function() {
         //restart event
         restart.click(function() {
             reset();
+              //stop the timer
         });
 
         //play again event
