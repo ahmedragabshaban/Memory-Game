@@ -6,11 +6,11 @@
 * [Description](#discription)
 * [HOW TO Run](#HOW TO Run)
 * [HOW TO PLAY](#HOW-TO-PLAY)
-* [Score](#SCORE)
-* [Win](#Win)
-* [Lose](#LOSE)
-* [Restart](#Restart)
-* [Resources](#Resources)
+* [Score](#sCORE)
+* [Win](#win)
+* [Lose](#lOSE)
+* [Restart](#restart)
+* [Resources](#resources)
 * [License](#license)
 
 
