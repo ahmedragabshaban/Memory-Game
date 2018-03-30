@@ -56,5 +56,11 @@ https://stackoverflow.com/questions/5517597/plain-count-up-timer-in-javascript
 animate.css:
 https://daneden.github.io/animate.css/
 
+bootstrap:
+https://getbootstrap.com/
+
+jquery:
+https://jquery.com/
+
 ## License
 This project is licensed under the terms of the MIT license.
