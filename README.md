@@ -4,8 +4,8 @@
 ## Table of Contents
 
 * [Description](#description)
-* [HOW TO Run](#how-to-run)
-* [HOW TO PLAY](#how-to-play)
+* [How to run](#how-to-run)
+* [How to Play](#how-to-play)
 * [Score](#score)
 * [Win](#win)
 * [Lose](#lose)
