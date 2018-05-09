@@ -6,13 +6,13 @@
     <title>Matching Game</title>
     <meta content="IE=Edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css\font-awesome-4.7.0\css\font-awesome.css">
     <link href="img/icon.png" rel="shortcut icon">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
     <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 
 <body>
@@ -25,14 +25,14 @@
         <section class="score-panel">
 
             <ul class="stars">
-                <li><i id="starOne" class="fa fa-star star"></i></li>
+                <li><i id="starOne" class="fa fa-star star "></i></li>
                 <li><i id="starTwo" class="fa fa-star star"></i></li>
                 <li><i id="starThree" class="fa fa-star star"></i></li>
             </ul>
 
-            <span class="moves left">0</span> Moves
+            <span class="moves left">3</span> Moves
 
-            <span id="minutes" class="hide"></span>:<span id="seconds" class="hide"></span>
+            <span id="minutes"></span>:<span id="seconds"></span>
 
             <div class="restart right">
                 <i class="fa fa-repeat"></i> Restart
@@ -66,7 +66,7 @@
 
                         <span id="minute"></span>:<span id="second"></span></p>
 
-                    <button  type="button" class="again btn btn-primary" data-dismiss="modal" aria-label="Close">
+                    <button  type="button" class="btn btn-primary again" data-dismiss="modal" aria-label="Close">
                       Play Again
                     </button>
 
@@ -105,8 +105,8 @@
     </div>
 
     <!--JavaScript-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/app.js"></script>
 
 </body>

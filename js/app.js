@@ -1,5 +1,5 @@
 $(function() {
-    
+
     function play() {
 
         //define variables
@@ -31,7 +31,7 @@ $(function() {
         let cards = [diamond, plane, anchor, bolt, cube, leaf, bicycle, bomb, diamond, plane, anchor, bolt, cube, leaf, bicycle, bomb];
         let openCards = [];
         let count = 0;
-
+        let finish = 0;
 
 
         //shuffle the list of cards using the provided "shuffle" method below
@@ -39,7 +39,7 @@ $(function() {
 
         // Shuffle function from http://stackoverflow.com/a/2450976
         function shuffle(array) {
-            let currentIndex = array.length,
+            var currentIndex = array.length,
                 temporaryValue, randomIndex;
             while (currentIndex !== 0) {
                 randomIndex = Math.floor(Math.random() * currentIndex);
@@ -58,9 +58,9 @@ $(function() {
 
         //add each card's HTML to the page
         function adding(card, id) {
-            deck.append(`<li id=${id}  class="card open show noClick">
+            deck.append(`<li id=${id}  class="text-center card open show noClick">
 	          ${card}    </li>`);
-        }    
+        }
 
         const card = $(".card");
 	    //lock cards temporary
@@ -69,31 +69,25 @@ $(function() {
              setTimeout(function() {
              card.toggleClass("noClick");
               }, 500);
-        }  
-    
+        }
 
-         //start the timer
+        //hide cards after 10 seconds
+        setTimeout(function() {
+            display(card);
+        }, 10000);
+
+        //start the timer
         //countup function from https://stackoverflow.com/questions/5517597/plain-count-up-timer-in-javascript (modified version)
-       
-        let sec = -9;
+        let sec = 0;
         function pad(val) {
             return val > 9 ? val : "0" + val;
         }
-         let timer = setInterval(function() {
+        let timer = setInterval(function() {
             seconds.html(pad(++sec % 60));
-            second.html(pad(sec++ % 60));
-            minutes.html(pad(parseInt(sec / 60, 10-1)));
-            minute.html(pad(parseInt(sec / 60, 10-1)));
-         
-         }, 2000);
-              //hide cards after 10 seconds
-        setTimeout(function() {
-        display(card);
-        minutes.toggleClass("hide");
-        seconds.toggleClass("hide");
- //End of function
-
-        }, 10000);
+            second.html(pad(++sec % 60));
+            minutes.html(pad(parseInt(sec / 60, 10)));
+            minute.html(pad(parseInt(sec / 60, 10)));
+        }, 2000); //End of function
 
         //Switch the cards functions
         function display(a) {
@@ -103,7 +97,7 @@ $(function() {
         //set up the event listener for a card. If a card is clicked
         card.click(function() {
             $(this).toggleClass("open show noClick");
-            //add the card to a *list* of "open" cards 
+            //add the card to a *list* of "open" cards
             openCards.push(this);
 
             //if the list already has another card
@@ -139,7 +133,6 @@ $(function() {
                 }, 500);
             }
         }
-        let finish = 0;
 
         //if the cards do match, lock the cards in the open position
         function match(x, y) {
@@ -152,18 +145,19 @@ $(function() {
             //if all cards have matched increase the counter,and check complete
             finish++;
 
-             // display a message with the final score 
+             // display a message with the final score
             if (finish === 8) {
-            	 //stop the timer
-             clearInterval(timer);
-             
-             setTimeout(function() {
+                setTimeout(function() {
+            //stop the timer
+                clearInterval(timer);
+
             //show popUp
             popUp.modal('show');
 
-                }, 200);
+                }, 300);
             }
         }
+
         //increment the move counter
         function counter() {
             //change the moves
@@ -187,9 +181,10 @@ $(function() {
 
            // 20 moves you lose
             else if (count === 20) {
-            clearInterval(timer);
+                clearInterval(timer);
+
             //show popUp
-            popUpLose.modal('show'); 
+            popUpLose.modal('show');
             }
         }
 
@@ -211,11 +206,8 @@ $(function() {
         //set up restart button
         function reset() {
             //remove cards from game
-        minutes.toggleClass("hide");
-        seconds.toggleClass("hide");
             $(".deck").empty();
-              clearInterval(timer);        
-             //reset num of moves
+            //reset num of moves
             count = 0;
             moves.html(count);
             //reset stars
@@ -229,14 +221,13 @@ $(function() {
         //restart event
         restart.click(function() {
             reset();
-              //stop the timer
         });
 
         //play again event
         again.click(function() {
             reset();
         });
-     
+
           //animate using animate.css
         function animate(x){
         $(x).addClass('animated shake');

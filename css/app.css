@@ -1,19 +1,27 @@
 html {
      box-sizing: border-box;
 }
+
  *, *::before, *::after {
      box-sizing: inherit;
 }
+
  html, body {
      width: 100%;
      height: 100%;
      margin: 0;
      padding: 0;
 }
+
  body, .modal-body {
      background: #ffffff url('../img/geometry2.png');
     /* Background pattern from Subtle Patterns */
      font-family: 'Coda', cursive;
+}
+
+ h1 {
+     font-family: 'Open Sans', sans-serif;
+     font-weight: 300;
 }
  .container {
      display: flex;
@@ -21,13 +29,11 @@ html {
      align-items: center;
      flex-direction: column;
 }
- h1 {
-     font-family: 'Open Sans', sans-serif;
-     font-weight: 300;
-}
+
  #minutes {
      padding-left: 25px;
 }
+
 /* * Styles for the deck of cards */
  .deck {
      width: 660px;
@@ -41,6 +47,7 @@ html {
      justify-content: space-between;
      align-items: center;
 }
+
  .deck .card {
      height: 115px;
      width: 125px;
@@ -54,59 +61,74 @@ html {
      align-items: center;
      box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
 }
+
  .deck .card.open {
      transform: rotateY(0);
      background: #02b3e4;
      cursor: default;
 }
+
  .deck .card.show {
      font-size: 33px;
 }
+
  .deck .card.match {
      cursor: default;
      background: #02ccba;
      font-size: 33px;
 }
+
 /* * Styles for the Score Panel */
  .score-panel {
      min-width: 500px;
 }
+
  .score-panel .stars {
      margin: 0;
      padding: 0;
      display: inline-block;
      margin: 0 5px 0 0;
 }
+
  .score-panel .stars li {
      list-style: none;
      display: inline-block;
 }
+
  .score-panel .restart {
      float: right;
      cursor: pointer;
 }
+
  .hide {
      display: none;
 }
+
  .padd-title {
      padding: 25px 40px 0 0;
 }
+
  .star {
      font-size: 1.5em;
      color: #FFF400;
 }
+
  .big {
      font-size: 3.3em;
 }
+
  .bigger{
      font-size: 7.5em;
 }
+
  .font-big {
      font-size: 3em;
 }
+
  .font-small {
      font-size: 1.5em;
 }
+
  .noClick {
      pointer-events: none;
 }
